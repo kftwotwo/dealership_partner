@@ -15,10 +15,12 @@ end
 
 get('/dealerships') do
   @dealerships = Dealership.all()
-  erb(:all_dealerships)
+  erb(:dealerships)
 end
 
 post('/dealerships') do
-
+  name = params.fetch('name')
+  Dealership.new(name).save()
+  @dealerships = Dealership.all()
   erb(:success)
 end
