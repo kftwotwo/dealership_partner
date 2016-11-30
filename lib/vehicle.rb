@@ -10,5 +10,7 @@ class Vehicle
     @make
   end
 
-
+  def model
+    @model
+  end
 end
