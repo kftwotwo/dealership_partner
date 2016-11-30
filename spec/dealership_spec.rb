@@ -8,6 +8,8 @@ describe(Dealership) do
       expect(test_dealer.name()).to(eq("Diego"))
       expect(test_dealer.id()).to(eq(1))
       expect(test_dealer.cars()).to(eq([]))
+      test_dealer.save()
+      expect(Dealership.all()).to(eq([test_dealer]))
     end
   end
 end
