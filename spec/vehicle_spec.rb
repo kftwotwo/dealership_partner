@@ -57,4 +57,10 @@ describe(Vehicle) do
       expect(Vehicle.all()).to(eq([test_vehicle]))
     end
   end
+
+  describe('.clear') do
+    it('will clear the array') do
+      expect(Vehicle.clear()).to(eq([]))
+    end
+  end
 end
