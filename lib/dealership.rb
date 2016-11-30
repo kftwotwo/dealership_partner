@@ -15,4 +15,8 @@ class Dealership
   define_singleton_method(:all) do
     @@dealership
   end
+
+  define_singleton_method(:clear) do
+    @@dealership = []
+  end
 end

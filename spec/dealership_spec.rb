@@ -10,6 +10,8 @@ describe(Dealership) do
       expect(test_dealer.cars()).to(eq([]))
       test_dealer.save()
       expect(Dealership.all()).to(eq([test_dealer]))
+      Dealership.clear()
+      expect(Dealership.all()).to(eq([]))
     end
   end
 end
