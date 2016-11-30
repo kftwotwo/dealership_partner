@@ -1,32 +1,12 @@
 class Vehicle
+  attr_reader(:make, :model, :year, :color, :engine_size, :doors)
 
-  def initialize(make, model, year, color, engine_size, doors)
-    @make = make
-    @model = model
-    @year = year
-    @color = color
-    @engine = engine_size
-    @doors = doors
+  def initialize(attributes)
+    @make = attributes.fetch(:make, "Not Available")
+    @model = attributes.fetch(:model, "Not Available")
+    @year = attributes.fetch(:year, "Not Available")
+    @color = attributes.fetch(:color, "Not Available")
+    @engine_size = attributes.fetch(:engine_size, "Not Available")
+    @doors = attributes.fetch(:doors, "Not Available")
   end
-
-  def make
-    @make
-  end
-
-  def model
-    @model
-  end
-
-  def year
-    @year
-  end
-
-  def color
-    @color
-  end
-
-  def engine
-    @engine
-  end
-
 end
