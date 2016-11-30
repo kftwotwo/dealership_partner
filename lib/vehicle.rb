@@ -4,6 +4,7 @@ class Vehicle
     @make = make
     @model = model
     @year = year
+    @color = color
     @engine = engine_size
     @doors = doors
   end
@@ -18,6 +19,10 @@ class Vehicle
 
   def year
     @year
+  end
+
+  def color
+    @color
   end
 
   def engine

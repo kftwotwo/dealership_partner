@@ -26,6 +26,14 @@ describe(Vehicle) do
     end
   end
 
+  describe('#color') do
+    it('get the make of the vehicle') do
+      test_vehicle = Vehicle.new("Mazda","MX-5", "2000", "blue", "4L", "4")
+      # save
+      expect(test_vehicle.color()).to(eq("blue"))
+    end
+  end
+
   describe('#engine') do
     it('get the make of the vehicle') do
       test_vehicle = Vehicle.new("Mazda","MX-5", "2000", "blue", "4L", "4")
