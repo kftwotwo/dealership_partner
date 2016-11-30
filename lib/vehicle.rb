@@ -1,6 +1,6 @@
 class Vehicle
   attr_reader(:make, :model, :year, :color, :engine_size, :doors)
-
+  @@vehicles = []
   def initialize(attributes)
     @make = attributes.fetch(:make, "Not Available")
     @model = attributes.fetch(:model, "Not Available")
@@ -9,4 +9,8 @@ class Vehicle
     @engine_size = attributes.fetch(:engine_size, "Not Available")
     @doors = attributes.fetch(:doors, "Not Available")
   end
+
+    define_singleton_method(:all) do
+      @@vehicles
+    end
 end
