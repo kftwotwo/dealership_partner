@@ -13,4 +13,8 @@ class Vehicle
     define_singleton_method(:all) do
       @@vehicles
     end
+
+    def save
+      @@vehicles.push(self)
+    end
 end

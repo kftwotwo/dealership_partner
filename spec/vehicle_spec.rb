@@ -49,4 +49,12 @@ describe(Vehicle) do
       expect(Vehicle.all()).to(eq([]))
     end
   end
+
+  describe('#save') do
+    it('get the amount of doors of the vehicle') do
+      test_vehicle = Vehicle.new({})
+      test_vehicle.save()
+      expect(Vehicle.all()).to(eq([test_vehicle]))
+    end
+  end
 end
