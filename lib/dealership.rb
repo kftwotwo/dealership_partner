@@ -29,6 +29,4 @@ class Dealership
     end
     found
   end
-
-
 end
