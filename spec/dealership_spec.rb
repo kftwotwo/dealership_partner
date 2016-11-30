@@ -33,4 +33,14 @@ describe(Dealership) do
     end
   end
 
+  describe('.find') do
+    it ('will dealership by its id') do
+      test_dealer = Dealership.new("Diego")
+      test_dealer.save()
+      test_dealer2 = Dealership.new("Kevin")
+      test_dealer2.save()
+      expect(Dealership.find(test_dealer.id())).to(eq(test_dealer))
+    end
+  end
+
 end

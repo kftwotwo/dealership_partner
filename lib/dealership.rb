@@ -1,22 +1,34 @@
 class Dealership
   attr_reader(:name, :id, :cars)
 
-@@dealership = []
+@@dealerships = []
   def initialize(name)
     @name = name
-    @id = @@dealership.length(  ).+(1)
+    @id = @@dealerships.length().+(1)
     @cars = []
   end
 
   def save
-    @@dealership.push(self)
+    @@dealerships.push(self)
   end
 
   define_singleton_method(:all) do
-    @@dealership
+    @@dealerships
   end
 
   define_singleton_method(:clear) do
-    @@dealership = []
+    @@dealerships = []
   end
+
+  define_singleton_method(:find) do |id|
+    found = nil
+    @@dealerships.each() do |dealership|
+      if dealership.id() == id
+        found = dealership
+      end
+    end
+    found
+  end
+
+
 end
